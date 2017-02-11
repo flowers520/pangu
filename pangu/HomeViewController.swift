@@ -40,6 +40,14 @@ class HomeViewController: UIViewController {
             
         }
         
+        let newView = UIView()
+        scrollView.addSubview(newView)
+        newView.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(buttons.snp_bottom).offset(20)
+            make.size.equalTo(CGSizeMake(SCREEN_WIDTH, 140))
+        }
+
+        
     }
     //懒加载创建 ScrollView
     private lazy var scrollView: UIScrollView = {
