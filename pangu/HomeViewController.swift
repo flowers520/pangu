@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: UIViewController {
 
@@ -31,7 +32,13 @@ class HomeViewController: UIViewController {
         let banerVC = childViewControllers[0]
         bannerView.addSubview(banerVC.view)
         
-        
+        let buttons = OrderView()
+        scrollView.addSubview(buttons)
+        buttons.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(bannerView.snp_bottom).offset(20)
+            make.size.equalTo(CGSizeMake(SCREEN_WIDTH, 160))
+            
+        }
         
     }
     //懒加载创建 ScrollView

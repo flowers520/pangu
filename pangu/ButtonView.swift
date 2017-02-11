@@ -24,7 +24,8 @@ class ButtonView: UIButton {
 //        labelNum?.clipsToBounds = true
 //        //self.addSubview(labelNum!)
         
-        titleLabel?.textAlignment = .Center
+//        titleLabel?.textAlignment = .Center
+        
         
         
     }
@@ -36,15 +37,15 @@ class ButtonView: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         //调整照片
-        imageView?.x = self.width*3/16
-        imageView?.y = self.height*3/16
-        imageView?.width = self.width*3/8
-        imageView?.height = self.height*3/8
+        imageView?.x = 10
+        imageView?.y = 0
+        imageView?.width = width-10-10
+        imageView?.height = height*3/4
         
         //调整文字
         titleLabel?.x = 0
-        titleLabel?.y = self.height*3/4
-        titleLabel?.width = self.width
-        titleLabel?.height = self.height/4
+        titleLabel?.y = imageView!.height
+        titleLabel?.width = width
+        titleLabel?.height = height/4
     }
 }
