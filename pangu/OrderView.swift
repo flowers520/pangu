@@ -34,6 +34,9 @@ class OrderView: UIView {
             let button = ButtonView()
             button.setTitle(LabelArray[index], forState: .Normal)
             button.backgroundColor = UIColor.blackColor()
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.grayColor().CGColor
+            button.clipsToBounds = true
             button.setImage(UIImage(named: "icon_log_qq_63x63_"), forState: .Normal)
             button.titleLabel?.font = UIFont.systemFontOfSize(13)
             button.tag = index

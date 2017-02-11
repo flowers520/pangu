@@ -24,7 +24,7 @@ class ButtonView: UIButton {
 //        labelNum?.clipsToBounds = true
 //        //self.addSubview(labelNum!)
         
-//        titleLabel?.textAlignment = .Center
+        titleLabel?.textAlignment = .Center
         
         
         
@@ -34,17 +34,19 @@ class ButtonView: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
+    //button 宽高 80
+    //screenw 375
     override func layoutSubviews() {
         super.layoutSubviews()
         //调整照片
-        imageView?.x = 10
-        imageView?.y = 0
-        imageView?.width = width-10-10
-        imageView?.height = height*3/4
+        imageView?.x = 26
+        imageView?.y = 10
+        imageView?.width = 40
+        imageView?.height = 40
         
         //调整文字
         titleLabel?.x = 0
-        titleLabel?.y = imageView!.height
+        titleLabel?.y = 60
         titleLabel?.width = width
         titleLabel?.height = height/4
     }
