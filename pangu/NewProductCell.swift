@@ -20,10 +20,10 @@ class NewProductCell: UICollectionViewCell {
     
     private func setupUI(){
         self.backgroundColor = UIColor.blackColor()
-        image.frame = CGRectMake(20, 10, 100, 80)
+        image.frame = CGRectMake(8, 10, 100, 80)
         addSubview(image)
         
-        label.frame = CGRectMake(15, 100, 110, 20)
+        label.frame = CGRectMake(8, 100, 100, 20)
         label.numberOfLines = 0
         label.lineBreakMode = .ByCharWrapping
         label.font = UIFont.systemFontOfSize(13)

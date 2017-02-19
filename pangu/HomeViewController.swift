@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +40,13 @@ class HomeViewController: UIViewController {
             
         }
         
-        let newView = UIView()
+        let newView = newProductController()
+        newView.backgroundColor = UIColor.whiteColor()
         scrollView.addSubview(newView)
+        
         newView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(buttons.snp_bottom).offset(20)
-            make.size.equalTo(CGSizeMake(SCREEN_WIDTH, 140))
+            make.size.equalTo(CGSizeMake(SCREEN_WIDTH, 160))
         }
 
         
